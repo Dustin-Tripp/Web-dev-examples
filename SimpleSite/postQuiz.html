@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Java Programming</title>
+        <link rel="stylesheet" type="text/css" href="CSS/mainstyles.css">
+    </head>
+    
+    <body>
+        
+        <div id="header">
+            <nav>
+            
+              <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="preQuiz.html">Pre-Quiz</a></li> 
+                    <li><a href="howTo.html">How-To</a></li>
+                    <li><a href="postQuiz.html">Post Quiz</a></li>
+                    <li><a href="thankYou.html">Thank You!</a></li> 
+                </ul>
+                       
+               
+            
+            </nav>
+        </div>
+       
+
+        <div id="quiz"></div>
+        <div id="loc"><button id="submit">Get Results</button></div>
+        <div id="results"></div>
+        <script>
+            var myQuestions = [
+  {
+    question: "Which is NOT! a correct way to set up an IF statentment in JAVA",
+    answers: {
+      a: 'if (a < b) {...}; ',
+      b: 'if (a = b) {...}; ',
+      c: 'if (a == b) {...};'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "The condition (values to be compaired) are placed inside of what?",
+    answers: {
+      a: '{}',
+      b: '()',
+      c: '[]',
+      d: 'None of the above'
+    },
+    correctAnswer: 'b'
+  },
+  {
+    question: "What will the statement  if (900 < 0) return?",
+    answers: {
+      a: 'False',
+      b: 'True',
+      c: 'an error'
+
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "The body of the if statement is contained in?",
+    answers: {
+      a: '()',
+      b: '{}',
+      c: '[]',
+      d: '" "'
+    },
+    correctAnswer: 'b'
+  }
+];
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+  function showQuestions(questions, quizContainer){
+    // we'll need a place to store the output and the answer choices
+    var output = [];
+    var answers;
+
+    // for each question...
+    for(var i=0; i<questions.length; i++){
+      
+      // first reset the list of answers
+      answers = [];
+
+      // for each available answer...
+      for(letter in questions[i].answers){
+
+        // ...add an html radio button
+        answers.push(
+          '<label>'
+            + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+            + letter + ': '
+            + questions[i].answers[letter]
+          + '</label>'
+        );
+      }
+
+      // add this question and its answers to the output
+      output.push(
+        '<div class="question">' + questions[i].question + '</div>'
+        + '<div class="answers">' + answers.join('<br>') + '</div>'
+      );
+    }
+
+    // finally combine our output list into one string of html and put it on the page
+    quizContainer.innerHTML = output.join('');
+  }
+
+
+  function showResults(questions, quizContainer, resultsContainer){
+    
+    // gather answer containers from our quiz
+    var answerContainers = quizContainer.querySelectorAll('.answers');
+    
+    // keep track of user's answers
+    var userAnswer = '';
+    var numCorrect = 0;
+    
+    // for each question...
+    for(var i=0; i<questions.length; i++){
+
+      // find selected answer
+      userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+      
+      // if answer is correct
+      if(userAnswer===questions[i].correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+        
+        // color the answers green
+        answerContainers[i].style.color = 'lightgreen';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[i].style.color = 'red';
+      }
+    }
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+  }
+
+  // show questions right away
+  showQuestions(questions, quizContainer);
+  
+  // on submit, show results
+  submitButton.onclick = function(){
+    showResults(questions, quizContainer, resultsContainer);
+  }
+
+}</script>
+        
+                  
+         <div id="foot">
+             <h1 class="underline">Menu</h1>
+              <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="preQuiz.html">Pre-Quiz</a></li> 
+                    <li><a href="howTo.html">How-To</a></li>
+                    <li><a href="postQuiz.html">Post Quiz</a></li>
+                    <li><a href="thankYou.html">Thank You!</a></li> 
+                </ul>
+                       
+             
+             <h2 id="copy">Privacy Policy/Terms and Conditions. Copyright 2021. How to program JAVA for IS420.</h2>            
+
+               
+        </div>
+     
+ 
+      
+        
+     </body>
+</html>

@@ -1,0 +1,259 @@
+
+body {
+    font-size: 62.5%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: agency fb;
+}
+
+
+nav ul {
+    font-size: 0px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 245px 0px;
+    color: red;
+    width: 100%;
+}
+    
+nav {
+    background-image: url(../Images/Tltletxt.png);
+    height:inherit;
+    width: inherit;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+#header {
+    box-sizing: border-box;
+    background-image: url(../Images/Java_Back1.jpg.png);
+    background-position: center;
+    height: 300px;
+    padding-top: 0px;
+    background-size: cover;
+}
+nav a{
+    font-size: 2rem;
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-family: agency fb;
+    text-align: center;
+}
+nav a:hover{
+    background-color: ghostwhite;
+    color: black;
+}
+nav li{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20%;
+    
+}
+
+#foot {
+    box-sizing: border-box;
+    background-image: url(../Images/Java_Back1.jpg.png);  
+    background-position: center;
+    padding-top: 0px;
+    background-size: cover;
+    clear: both;
+}
+
+#foot ul {
+    box-sizing: border-box;
+    font-size: 20px;
+    list-style-type: none;
+    color: black;
+    width: 100%;
+}
+#foot a:hover{
+    background-color: ghostwhite;
+    color: black;
+}
+h1 {
+    color: ghostwhite;
+    padding: 0px 20px;
+    font-size: 20px;
+    
+}
+
+#foot a {
+    color: black;
+    text-decoration: none;
+    font-family: agency fb;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.social {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+#copy {
+     font-size: 20px;
+    color:black;
+    text-align: center;
+}
+
+#foot li {
+}
+
+#Summuries {
+    box-sizing: border-box;
+    float: left;
+    width: 66%;
+    height: 400px;
+    text-align: center;
+    padding: 100px 50px;
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+#titlepic {
+    float: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#titlepic1 {
+    float: left;
+    width: 33%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#controw {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    
+}
+
+p {
+    font-size: 20px;
+}
+
+.contentul {
+     box-sizing: border-box;
+    float: left;
+    width: 66%;
+    text-align: center;
+    padding: 50px 50px;
+    font-size: 20px;
+    list-style: none
+    
+}
+
+
+
+#castpic {
+    box-sizing: border-box;
+     float: left;
+    width: 33%;
+    text-align: center;
+    
+}
+
+#Reviews {
+      box-sizing: border-box;
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 50px 50px;
+    
+}
+
+#castinfo {
+    box-sizing: border-box;
+    float: left;
+    width: 33%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+ 
+}
+
+h3 {
+    font-size: 25px;
+}
+
+b {
+    color: red
+}
+
+#castpic img{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    
+}
+body2{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+}
+.question{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+
+}
+.answers {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 15px
+    
+}
+#submit{
+   
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rebeccapurple;
+    color: white;
+    border: 25px;
+    border-radius: 10px;
+    padding: 20px;
+    align-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#loc{
+    padding-left: 200px;
+}
+#submit:hover{
+  background-color: aqua;
+}
+
+#results{
+    font-size: 30px;
+    text-align: center
+        
+}
+
+norm li{}
+}
+
